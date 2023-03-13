@@ -1,3 +1,5 @@
+# A simple mobile device shopping at eBay without being logged-in, therefore checkout process was omitted
+
 import pytest
 import time
 import json
@@ -60,7 +62,8 @@ def test_flight():
     driver.find_element(By.XPATH,'//android.widget.Button[@content-desc="Buy It Now"]').click()
     time.sleep(2)
 
-    # tbc...
+    # Close the browser
+    driver.quit()
 
 
 
