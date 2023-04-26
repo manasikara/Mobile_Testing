@@ -1,4 +1,4 @@
-# A simple mobile device shopping at eBay without being logged-in, therefore checkout process was omitted
+# A simple mobile device shopping process at eBay without being logged-in, therefore checkout was omitted
 
 import pytest
 import time
@@ -24,7 +24,7 @@ desired_cap={
 }
 
 
-def test_flight():
+def test_ebay():
     # create a driver instance
     driver=webdriver.Remote("http://127.0.0.1:4723/wd/hub",desired_cap)
 
@@ -47,7 +47,7 @@ def test_flight():
     time.sleep(3)
 
     # click the item
-    driver.find_element(By.XPATH,'//android.widget.TextView[@content-desc="$1,049.00"]').click()
+    driver.find_element(By.XPATH,'//android.widget.TextView[@content-desc="$994.99"]').click()
     time.sleep(2)
 
     # click the quantity list
